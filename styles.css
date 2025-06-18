@@ -1,0 +1,148 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 0;
+}
+header, section {
+  margin-bottom: 60px;
+}
+.hero {
+  text-align: center;
+}
+.hero img {
+  width: 250px;
+  max-width: 80%;
+  margin: 20px auto;
+  display: block;
+}
+.features {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  gap: 40px;
+}
+.features .left,
+.features .right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.features .left {
+  align-items: flex-end;
+}
+.features .right {
+  align-items: flex-start;
+}
+.cta-button {
+  background-color: #f26522;
+  color: #fff;
+  padding: 12px 20px;
+  margin: 20px auto 0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  max-width: 462px;
+}
+.cta-subtext.payment-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 24px;
+  margin-top: 10px;
+  max-width: 462px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.guarantee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Inter Tight', sans-serif;
+  font-size: 13px;
+  color: #424153;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+.guarantee img {
+  width: 16px;
+  height: 16px;
+}
+.payments {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.payments img {
+  width: 39.2px;
+  height: 24px;
+  object-fit: contain;
+}
+.section-split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.section-split img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+.text-block {
+  flex: 1 1 300px;
+}
+.image-block {
+  flex: 1 1 300px;
+}
+.key-points {
+  margin-top: 20px;
+}
+.key-points p {
+  margin-bottom: 10px;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  padding: 20px;
+  color: #aaa;
+}
+@media (max-width: 768px) {
+  .section-split {
+    flex-direction: column;
+  }
+  .features {
+    flex-direction: column;
+  }
+  .features .left,
+  .features .right {
+    align-items: center;
+  }
+  .cta-subtext.payment-section {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  .cta-button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
