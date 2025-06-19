@@ -11,7 +11,7 @@ body {
   color: #333;
   background-color: #ffffff;
 }
-
+/* Used to Centralize the Layout for better responsiveness */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -21,7 +21,7 @@ body {
 
 /* Hero Section */
 .hero {
-  text-align: center;
+  text-align: center;               /* Centers content and ensures spacing for visibility */
   padding: 80px 20px 60px;
 }
 
@@ -34,7 +34,7 @@ body {
 }
 
 /* Feature Grid Layout */
-.feature-grid-wrapper {
+.feature-grid-wrapper {    /* Uses absolute positioning for sorrounding features by acting as a relative reference */
   position: relative;
   width: 100%;
   max-width: 900px;
@@ -58,7 +58,7 @@ body {
 }
 
 .center-bowl::before,
-.center-bowl::after {
+.center-bowl::after {   /* Used to display both images as one image */
   content: "";
   width: 50%;
   height: 100%;
@@ -79,6 +79,7 @@ body {
   background-position: right center;
 }
 
+/* Feature Items positioned to the four corners of the center image */
 .feature {
   position: absolute;
   display: flex;
@@ -111,6 +112,7 @@ body {
   margin-top: 10px;
 }
 
+/* Colour coded containers for the feature-icon images */
 .icon-circle {
   width: 48px;
   height: 48px;
