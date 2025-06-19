@@ -1,57 +1,172 @@
+/* Reset and base styles */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter Tight', sans-serif;
   line-height: 1.6;
   color: #333;
 }
+
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
   padding: 40px 0;
 }
-header, section {
-  margin-bottom: 60px;
+
+header,
+section {
+  margin-bottom: 40px; /* Reduced from 60px */
 }
+
 .hero {
   text-align: center;
 }
+
 .hero img {
   width: 250px;
   max-width: 80%;
   margin: 20px auto;
   display: block;
 }
-.features {
+
+/* Updated Feature Quadrant Layout */
+.feature-grid-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto; /* Reduced from 40px */
+  height: 460px;
+}
+
+.center-bowl {
+  width: 280px;
+  height: 280px;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
   display: flex;
-  flex-wrap: nowrap;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.center-bowl::before,
+.center-bowl::after {
+  content: "";
+  width: 50%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: block;
+}
+
+.center-bowl::before {
+  background-image: url('./assets/hero_food_left.png');
+  background-position: left center;
+}
+
+.center-bowl::after {
+  background-image: url('./assets/hero_food_right.png');
+  background-position: right center;
+}
+
+.feature {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 320px;
+  font-size: 0.87rem;
+  color: #333;
+  z-index: 1;
+  margin: 0px -100px 0px -70px;
+}
+
+.feature-content {
+  text-align: left;
+  max-width: 320px;
+}
+
+.feature strong {
+  font-weight: 600;
+  color: #161723;
+}
+
+.feature span {
+  color: #424153;
+  font-size: 14px;
+}
+
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  margin-top: 20px;
-  gap: 40px;
+  overflow: hidden;
+  margin-right: 14px;
 }
-.features .left,
-.features .right {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+
+.icon-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
-.features .left {
-  align-items: flex-end;
+
+.green {
+  background-color: #DCF9CA;
 }
-.features .right {
-  align-items: flex-start;
+
+.yellow {
+  background-color: #F8F0D6;
 }
+
+.blue {
+  background-color: #C8F2E7;
+}
+
+.pink {
+  background-color: #F7CABD;
+}
+
+/* Feature quadrant positions */
+.feature-top-left {
+  top: 25%;
+  left: 1%;
+}
+
+.feature-top-right {
+  top: 25%;
+  right: 1%;
+}
+
+.feature-bottom-left {
+  bottom: 25%;
+  left: 1%;
+}
+
+.feature-bottom-right {
+  bottom: 25%;
+  right: 1%;
+}
+
+/* CTA button */
 .cta-button {
-  background-color: #f26522;
+  background-color: #EE6F4B;
   color: #fff;
   padding: 12px 20px;
-  margin: 20px auto 0;
+  margin: 10px auto 0; /* Reduced from 20px */
   border: none;
   border-radius: 5px;
   font-size: 16px;
@@ -59,18 +174,22 @@ header, section {
   display: block;
   width: 100%;
   max-width: 462px;
+  font-weight: 600;
 }
+
+/* Payment Section */
 .cta-subtext.payment-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 24px;
-  margin-top: 10px;
+  gap: 16px; /* Reduced from 24px */
+  margin-top: 8px; /* Reduced from 10px */
   max-width: 462px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .guarantee {
   display: flex;
   align-items: center;
@@ -82,67 +201,159 @@ header, section {
   letter-spacing: 0.5px;
   white-space: nowrap;
 }
+
 .guarantee img {
   width: 16px;
   height: 16px;
 }
+
 .payments {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px; /* Reduced from 8px */
 }
+
 .payments img {
   width: 39.2px;
   height: 24px;
   object-fit: contain;
 }
+
+/* Section splits */
 .section-split {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
-  gap: 30px;
+  gap: 40px;
 }
+
+.section-split.feature-bg-wrapper {
+  background-color: #f8f8f8;
+  width: 100%;
+}
+
+.section-split.feature-bg {
+  padding: 60px 0;
+}
+
 .section-split img {
   max-width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
+  height: 100%;
+  object-fit: cover;
 }
+
 .text-block {
-  flex: 1 1 300px;
+  flex: 1 1 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
-.image-block {
-  flex: 1 1 300px;
+
+.text-block h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1d1c2b;
 }
+
+.text-block p {
+  color: #5f5e6e;
+  font-size: 16px;
+}
+
 .key-points {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
+
 .key-points p {
-  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  font-size: 15px;
+  color: #5f5e6e;
+  border-top: 1px solid #ececec;
+  padding-top: 16px;
 }
+
+.key-points p:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.key-points p strong {
+  color: #f26522;
+  font-size: 24px;
+  width: 48px;
+}
+
+.image-block {
+  flex: 1 1 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer */
 footer {
   text-align: center;
   font-size: 14px;
   padding: 20px;
   color: #aaa;
 }
+
+/* Responsive */
 @media (max-width: 768px) {
   .section-split {
     flex-direction: column;
   }
-  .features {
-    flex-direction: column;
+
+  .feature-grid-wrapper {
+    height: auto;
+    padding: 20px;
   }
-  .features .left,
-  .features .right {
-    align-items: center;
+
+  .feature {
+    position: static;
+    margin-bottom: 16px;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
   }
+
+  .center-bowl {
+    margin-bottom: 20px;
+    position: static;
+    transform: none;
+    width: 200px;
+    height: 200px;
+  }
+
   .cta-subtext.payment-section {
     flex-direction: column;
     gap: 12px;
     align-items: center;
   }
+
   .cta-button {
     width: 100%;
     max-width: 100%;
+  }
+
+  .text-block h2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .text-block p,
+  .key-points p {
+    text-align: center;
+  }
+
+  .image-block {
+    justify-content: center;
   }
 }
