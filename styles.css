@@ -1,4 +1,4 @@
-/* Reset and base styles */
+/* Base styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,7 +43,7 @@ body {
   display: grid;
   place-items: center;
 }
-
+/* Center Bowl Layout */
 .center-bowl {
   width: 300px;
   height: 300px;
@@ -233,6 +233,8 @@ body {
   gap: 60px;
   margin-bottom: 80px;
 }
+
+/* Adding background colour to section_2 */
 
 .section-split.feature-bg-wrapper {
   background-color: #f9f9f9;
