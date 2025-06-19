@@ -96,17 +96,19 @@ body {
 }
 
 .feature strong {
-  display: block;
+  display: inline;
   font-weight: 600;
   color: #161723;
   font-size: 15px;
-  margin-bottom: 4px;
+  margin-bottom: none;
 }
 
 .feature span {
+  display: inline-block;
   color: #424153;
   font-size: 13px;
   line-height: 1.4;
+  margin-top: 10px;
 }
 
 .icon-circle {
@@ -118,11 +120,12 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  margin-right: 8px;
 }
 
 .icon-circle img {
-  width: 100%;
-  height: 100%;
+  width: 60%;
+  height: 60%;
   object-fit: contain;
   display: block;
 }
